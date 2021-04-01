@@ -1,4 +1,18 @@
-<div class="container search-bar">
-    <h2 class="text-danger">SEARCH FOR GIF TRENDS</h2>
-    <input type="text" placeholder="search for trending gifs" #gif (keyup.enter)="search(gif.value)">
+<div class="container">
+    <!-- <ng-progress></ng-progress> -->
+    <form style="margin-top: 100px">
+        <div class="form-group text-center">
+            <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search Gifs"
+                style="margin-bottom: 10px; margin-top: 10px" name="search" id="search">
+            <button class="btn btn-outline-danger" (click)="searchGifs()"><i class="fas fa-search"
+                    style="color: #000"></i>SEARCH</button>
+        </div>
+    </form>
+    <div class="card-columns">
+        <div *ngFor="let gif of gifs; index as i">
+            <div class="card" style="border: none;">
+                <a href="gif.url" target="_blank"><img src="{{gif.images.preview_webp.url}}" alt="" width="100%"></a>
+            </div>
+        </div>
+    </div>
 </div>

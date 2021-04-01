@@ -1,5 +1,10 @@
-    <div class="gifs">
-        <div class="gif" *ngFor="let gif of gifs">
-            <img [src]="gif.images.downsized.url" alt="Image">
+<div class="container">
+    <!-- <ng-progress></ng-progress> -->
+    <h1 class="text-center" style="margin-top: 60px;">Trending Gifs</h1>
+    <div *ngFor="let trendingGif of trendingGifs; index as i">
+        <div class="card" style="border: none;">
+            <a href="trendingGif.url" target="_blank">  <img src="{{trendingGif.images.preview_webp.url}}" alt="" width="100%"></a>
         </div>
     </div>
+
+</div>

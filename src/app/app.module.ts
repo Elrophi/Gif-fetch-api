@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TrendingComponent } from './trending/trending.component';
 import { SearchComponent } from './search/search.component';
 import { GifsComponent } from './gifs/gifs.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { GifsComponent } from './gifs/gifs.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
 
   ],
