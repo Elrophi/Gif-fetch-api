@@ -1,11 +1,1 @@
-.gifs{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    width: 1000px;
-    margin:0 auto;
-    margin-top: 5%;
-}
 
-.gif{
-    max-width: 250px;
-}
