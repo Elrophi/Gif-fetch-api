@@ -3,7 +3,7 @@
 ---
 
 >Description
-### This project allows you to write a quote add it dynamically and see the date and author. it also allows you to upvote and downvote
+### THis is a simple app to look up thousands of gifs and see trending gifs
 ---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
@@ -14,6 +14,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 >CSS
 
 >Typescript
+
+>Fetch-API (Giphy)
 ---
 
 ## Installation and setup locally
@@ -33,9 +35,15 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ```typescript
 typescript code sample:
- quotes:Quote[] = [
-    new Quote (1,'African','Life','he greatest glory in living lies not in never falling, but in rising every time we fall','Nelson Mandela', new Date(2021,1,12),0,0)
-  ];
+ trendingGifs() {
+    return this.http.get(`https://api.giphy.com/v1/gifs/trending?api_key=${this.gifyApiKey}&limit=50&rating=g`);
+  }
+
+  getGifs() {
+    return this.http.get(`https://api.giphy.com/v1/gifs/search?q=${this.query}&api_key=${this.gifyApiKey}&limit=50&rating=g`);
+   
+  }
+
 ```
 ### Email: Elrophi@gmail.com
 ### Contact: 0700 000 000
@@ -43,4 +51,4 @@ typescript code sample:
 ---
 
 ### Copyright and License
-[MIT License](https://github.com/Elrophi/Quote-gen/blob/master/src/LICENSE)  
+[MIT License](https://github.com/Elrophi/Gif-fetch-api/blob/master/LICENSE)  
